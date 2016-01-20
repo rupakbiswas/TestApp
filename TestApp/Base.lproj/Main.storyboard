@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7P-bJ-wJV">
+                                <rect key="frame" x="0.0" y="188" width="600" height="225"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu8-cv-LTo">
+                                        <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="5Cv-5D-fyo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAY-2D-DWM">
+                                        <rect key="frame" x="8" y="187" width="584" height="30"/>
+                                        <color key="backgroundColor" red="0.070588235289999995" green="0.4549019608" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" label="Submit Button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fPi-6N-zDZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dy4-Mh-1Pi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your text:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDA-tS-gcS">
+                                        <rect key="frame" x="8" y="37" width="117" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cP-Tt-D3Z">
+                                        <rect key="frame" x="8" y="66" width="584" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="name textfield"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="m1f-aK-yIo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Lu8-cv-LTo" firstAttribute="leading" secondItem="T7P-bJ-wJV" secondAttribute="leading" constant="8" id="2Xj-v6-dAE"/>
+                                    <constraint firstItem="dDA-tS-gcS" firstAttribute="top" secondItem="Lu8-cv-LTo" secondAttribute="bottom" constant="8" id="JgM-hF-aVc"/>
+                                    <constraint firstAttribute="trailing" secondItem="1cP-Tt-D3Z" secondAttribute="trailing" constant="8" id="LBv-MS-Ug4"/>
+                                    <constraint firstItem="Lu8-cv-LTo" firstAttribute="top" secondItem="T7P-bJ-wJV" secondAttribute="top" constant="8" id="Lb8-Mh-9Cf"/>
+                                    <constraint firstItem="dDA-tS-gcS" firstAttribute="leading" secondItem="T7P-bJ-wJV" secondAttribute="leading" constant="8" id="Nss-Xh-xCF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lu8-cv-LTo" secondAttribute="trailing" constant="8" id="PQm-3o-54v"/>
+                                    <constraint firstAttribute="bottom" secondItem="SAY-2D-DWM" secondAttribute="bottom" constant="8" id="We4-z6-bwS"/>
+                                    <constraint firstAttribute="trailing" secondItem="SAY-2D-DWM" secondAttribute="trailing" constant="8" id="aSL-N2-Tgi"/>
+                                    <constraint firstItem="SAY-2D-DWM" firstAttribute="leading" secondItem="T7P-bJ-wJV" secondAttribute="leading" constant="8" id="moy-zX-2B6"/>
+                                    <constraint firstAttribute="height" constant="225" id="qm1-Mw-OTG"/>
+                                    <constraint firstItem="1cP-Tt-D3Z" firstAttribute="top" secondItem="dDA-tS-gcS" secondAttribute="bottom" constant="8" id="wFk-KU-WKD"/>
+                                    <constraint firstItem="1cP-Tt-D3Z" firstAttribute="leading" secondItem="T7P-bJ-wJV" secondAttribute="leading" constant="8" id="xEt-g0-7al"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T7P-bJ-wJV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9fT-YB-nVv"/>
+                            <constraint firstAttribute="trailing" secondItem="T7P-bJ-wJV" secondAttribute="trailing" id="QIP-f6-6AU"/>
+                            <constraint firstItem="T7P-bJ-wJV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="feC-eh-A6f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Lu8-cv-LTo" id="7qf-og-Q9A"/>
+                        <outlet property="nameTextField" destination="1cP-Tt-D3Z" id="Uf2-2c-Uyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="399"/>
         </scene>
     </scenes>
 </document>

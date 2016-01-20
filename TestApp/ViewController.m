@@ -24,4 +24,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)submitButtonPressed:(id)sender {
+    NSString *formatedString=[self formattedString:self.nameTextField.text];
+    if([formatedString isEqualToString:@""]){
+        NSLog(@"String is empty!");
+        return;
+    }
+    self.nameLabel.text=formatedString;
+    
+}
+
+- (NSString*) formattedString:(NSString*)nameString{
+    return [[nameString componentsSeparatedByCharactersInSet:[[NSCharacterSet letterCharacterSet] invertedSet]] componentsJoinedByString:@""];
+}
 @end
